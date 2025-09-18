@@ -1,4 +1,4 @@
-# SmartPlugins.BoxInfo-Free
+# SmartPlugins.BoxInfo
 
 **Free version of BoxInfo for Smartstore 3 and 4. Display information boxes on main pages of your site.**
 
@@ -13,13 +13,13 @@
 ---
 
 ## Installation
-Installation instructions are available on the [official plugin page](https://smart-plugins.com/smart-store-info-boxes-plugin) and in the [Smartstore Community](https://community.smartstore.com/index.php?/files/file/141-info-boxes/).
+Installation instructions are available on the [BoxInfo plugin page](https://smart-plugins.com/smart-store-info-boxes-plugin) and in the [Smartstore Community](https://community.smartstore.com/index.php?/files/file/141-info-boxes/).
 
 ---
 
 ## Notes
 - This version is **free** and intended for Smartstore 3 and 4.
-- The official premium version for newer Smartstore versions is available at [smart-plugins.com](https://smart-plugins.com/smart-store-info-boxes-plugin).
+- The official premium version for newer Smartstore versions is available at [BoxInfo free plugin for smartstore](https://smart-plugins.com/smart-store-info-boxes-plugin).
 
 ---
 
