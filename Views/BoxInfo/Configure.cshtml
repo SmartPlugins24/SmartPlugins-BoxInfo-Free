@@ -1,0 +1,475 @@
+﻿@model SmartPlugins.BoxInfo.Models.BoxInfoModel
+@using SmartStore.Web.Framework;
+
+@{
+	Layout = "";
+}
+<div class="alert alert-info">
+    @Html.Raw(@T("Plugins.Widgets.BoxInfo.AdminInstruction"))
+</div>
+@using (Html.BeginForm())
+{
+	@Html.HiddenFor(model => model.Id)
+<table class="adminContent">
+    <tr>
+        <td colspan="2">
+            <div class="admin-config-group">
+                <div class="title">@T("Plugins.SmartPlugins.BoxInfo.BoxInfoOne")</div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.WidgetZone)
+        </td>
+        <td class="adminData">
+            @Html.DropDownListFor(model => model.WidgetZone, Model.AvailableWidgetZone)
+            @Html.ValidationMessageFor(model => model.WidgetZone)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.EnableInfoBoxOne)
+        </td>
+        <td class="adminData">
+            @Html.EditorFor(model => model.EnableInfoBoxOne)
+            @Html.ValidationMessageFor(model => model.EnableInfoBoxOne)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.InfoBoxOneUrl)
+        </td>
+        <td class="adminData">
+            @Html.EditorFor(model => model.InfoBoxOneUrl)
+            @Html.ValidationMessageFor(model => model.InfoBoxOneUrl)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.InfoBoxOneImageId)
+        </td>
+        <td class="adminData wide">
+
+
+            @Html.EditorFor(model => Model.InfoBoxOneImageId)
+            @Html.ValidationMessageFor(model => model.InfoBoxOneImageId)
+        </td>
+    </tr>
+    <tr class="toggle-slide-type-html">
+        <td colspan="2">
+            @(Html.LocalizedEditor<SmartPlugins.BoxInfo.Models.BoxInfoModel, SmartPlugins.BoxInfo.Models.BoxInfoLocalizedModel>("BoxInfoOne-localized",
+                                                                                                                                                                            @<table class="adminContent">
+                                                                                                                                                                                <tr>
+                                                                                                                                                                                    <td class="adminTitle">
+                                                                                                                                                                                        @Html.SmartLabelFor(model => model.Locales[item].InfoBoxOneTitle)
+                                                                                                                                                                                    </td>
+                                                                                                                                                                                    <td class="adminData wide">
+
+                                                                                                                                                                                        @Html.EditorFor(model => Model.Locales[item].InfoBoxOneTitle)
+                                                                                                                                                                                        @Html.ValidationMessageFor(model => model.Locales[item].InfoBoxOneTitle)
+                                                                                                                                                                                    </td>
+                                                                                                                                                                                </tr>
+                                                                                                                                                                                <tr>
+                                                                                                                                                                                    <td class="adminTitle">
+                                                                                                                                                                                        @Html.SmartLabelFor(model => model.Locales[item].InfoBoxOneText)
+                                                                                                                                                                                    </td>
+                                                                                                                                                                                    <td class="adminData wide">
+                                                                                                                                                                                        @*IMPORTANT: Do not delete, this hidden element contains the id to assign localized values to the corresponding language *@
+                                                                                                                                                                                        @Html.HiddenFor(model => model.Locales[item].LanguageId)
+
+                                                                                                                                                                                        @Html.EditorFor(model => Model.Locales[item].InfoBoxOneText)
+                                                                                                                                                                                        @Html.ValidationMessageFor(model => model.Locales[item].InfoBoxOneText)
+                                                                                                                                                                                    </td>
+                                                                                                                                                                                </tr>
+
+                                                                                                                                                                            </table>
+                                                                                                                                                                                                                                                          ,
+                                                                                                                                                                                                                                                    @<table class="adminContent">
+                                                                                                                                                                                                                                                        <tr>
+                                                                                                                                                                                                                                                            <td class="adminTitle">
+                                                                                                                                                                                                                                                                @Html.SmartLabelFor(model => model.InfoBoxOneTitle)
+                                                                                                                                                                                                                                                            </td>
+                                                                                                                                                                                                                                                            <td class="adminData wide">
+                                                                                                                                                                                                                                                                @Html.EditorFor(model => model.InfoBoxOneTitle)
+                                                                                                                                                                                                                                                                @Html.ValidationMessageFor(model => model.InfoBoxOneTitle)
+                                                                                                                                                                                                                                                            </td>
+                                                                                                                                                                                                                                                        </tr>
+                                                                                                                                                                                                                                                        <tr>
+                                                                                                                                                                                                                                                            <td class="adminTitle">
+                                                                                                                                                                                                                                                                @Html.SmartLabelFor(model => model.InfoBoxOneText)
+                                                                                                                                                                                                                                                            </td>
+                                                                                                                                                                                                                                                            <td class="adminData wide">
+                                                                                                                                                                                                                                                                @Html.EditorFor(model => model.InfoBoxOneText)
+                                                                                                                                                                                                                                                                @Html.ValidationMessageFor(model => model.InfoBoxOneText)
+                                                                                                                                                                                                                                                            </td>
+                                                                                                                                                                                                                                                        </tr>
+                                                                                                                                                                                                                                                    </table> ))
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+            <div class="admin-config-group">
+                <div class="title">@T("Plugins.SmartPlugins.BoxInfo.BoxInfoTwo")</div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.EnableInfoBoxTwo)
+        </td>
+        <td class="adminData">
+            @Html.EditorFor(model => model.EnableInfoBoxTwo)
+            @Html.ValidationMessageFor(model => model.EnableInfoBoxTwo)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.InfoBoxTwoUrl)
+        </td>
+        <td class="adminData">
+            @Html.EditorFor(model => model.InfoBoxTwoUrl)
+            @Html.ValidationMessageFor(model => model.InfoBoxTwoUrl)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.InfoBoxTwoImageId)
+        </td>
+        <td class="adminData wide">
+
+
+
+            @Html.EditorFor(model => Model.InfoBoxTwoImageId)
+            @Html.ValidationMessageFor(model => model.InfoBoxTwoImageId)
+        </td>
+    </tr>
+    <tr class="toggle-slide-type-html">
+        <td colspan="2">
+            @(Html.LocalizedEditor<SmartPlugins.BoxInfo.Models.BoxInfoModel, SmartPlugins.BoxInfo.Models.BoxInfoLocalizedModel>("BoxInfoTwo-localized",
+                                                                                                                                                                                    @<table class="adminContent">
+                                                                                                                                                                                        <tr>
+                                                                                                                                                                                            <td class="adminTitle">
+                                                                                                                                                                                                @Html.SmartLabelFor(model => model.Locales[item].InfoBoxTwoTitle)
+                                                                                                                                                                                            </td>
+                                                                                                                                                                                            <td class="adminData wide">
+
+                                                                                                                                                                                                @Html.EditorFor(model => Model.Locales[item].InfoBoxTwoTitle)
+                                                                                                                                                                                                @Html.ValidationMessageFor(model => model.Locales[item].InfoBoxTwoTitle)
+                                                                                                                                                                                            </td>
+                                                                                                                                                                                        </tr>
+                                                                                                                                                                                        <tr>
+                                                                                                                                                                                            <td class="adminTitle">
+                                                                                                                                                                                                @Html.SmartLabelFor(model => model.Locales[item].InfoBoxTwoText)
+                                                                                                                                                                                            </td>
+                                                                                                                                                                                            <td class="adminData wide">
+                                                                                                                                                                                                @Html.HiddenFor(model => model.Locales[item].LanguageId)
+
+                                                                                                                                                                                                @Html.EditorFor(model => Model.Locales[item].InfoBoxTwoText)
+                                                                                                                                                                                                @Html.ValidationMessageFor(model => model.Locales[item].InfoBoxTwoText)
+                                                                                                                                                                                            </td>
+                                                                                                                                                                                        </tr>
+
+                                                                                                                                                                                    </table>
+                                                                                                                                                                                                                                                                 ,
+                                                                                                                                                                                                                                                        @<table class="adminContent">
+                                                                                                                                                                                                                                                            <tr>
+                                                                                                                                                                                                                                                                <td class="adminTitle">
+                                                                                                                                                                                                                                                                    @Html.SmartLabelFor(model => model.InfoBoxTwoTitle)
+                                                                                                                                                                                                                                                                </td>
+                                                                                                                                                                                                                                                                <td class="adminData wide">
+                                                                                                                                                                                                                                                                    @Html.EditorFor(model => model.InfoBoxTwoTitle)
+                                                                                                                                                                                                                                                                    @Html.ValidationMessageFor(model => model.InfoBoxTwoTitle)
+                                                                                                                                                                                                                                                                </td>
+                                                                                                                                                                                                                                                            </tr>
+                                                                                                                                                                                                                                                            <tr>
+                                                                                                                                                                                                                                                                <td class="adminTitle">
+                                                                                                                                                                                                                                                                    @Html.SmartLabelFor(model => model.InfoBoxTwoText)
+                                                                                                                                                                                                                                                                </td>
+                                                                                                                                                                                                                                                                <td class="adminData wide">
+                                                                                                                                                                                                                                                                    @Html.EditorFor(model => model.InfoBoxTwoText)
+                                                                                                                                                                                                                                                                    @Html.ValidationMessageFor(model => model.InfoBoxTwoText)
+                                                                                                                                                                                                                                                                </td>
+                                                                                                                                                                                                                                                            </tr>
+
+                                                                                                                                                                                                                                                        </table>
+                                                                                                                                                                                                                                                                                                                     ))
+        </td>
+    </tr>
+
+
+    <tr>
+        <td colspan="2">
+            <div class="admin-config-group">
+                <div class="title">@T("Plugins.SmartPlugins.BoxInfo.BoxInfoThree")</div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.EnableInfoBoxThree)
+        </td>
+        <td class="adminData">
+            @Html.EditorFor(model => model.EnableInfoBoxThree)
+            @Html.ValidationMessageFor(model => model.EnableInfoBoxThree)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.InfoBoxThreeUrl)
+        </td>
+        <td class="adminData">
+            @Html.EditorFor(model => model.InfoBoxThreeUrl)
+            @Html.ValidationMessageFor(model => model.InfoBoxThreeUrl)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.InfoBoxThreeImageId)
+        </td>
+        <td class="adminData wide">
+
+
+            @Html.EditorFor(model => Model.InfoBoxThreeImageId)
+            @Html.ValidationMessageFor(model => model.InfoBoxThreeImageId)
+        </td>
+    </tr>
+    <tr class="toggle-slide-type-html">
+        <td colspan="2">
+            @(Html.LocalizedEditor<SmartPlugins.BoxInfo.Models.BoxInfoModel, SmartPlugins.BoxInfo.Models.BoxInfoLocalizedModel>("BoxInfoThree-localized",
+                                                                                                                                                                                    @<table class="adminContent">
+                                                                                                                                                                                        <tr>
+                                                                                                                                                                                            <td class="adminTitle">
+                                                                                                                                                                                                @Html.SmartLabelFor(model => model.Locales[item].InfoBoxThreeTitle)
+                                                                                                                                                                                            </td>
+                                                                                                                                                                                            <td class="adminData wide">
+
+                                                                                                                                                                                                @Html.EditorFor(model => Model.Locales[item].InfoBoxThreeTitle)
+                                                                                                                                                                                                @Html.ValidationMessageFor(model => model.Locales[item].InfoBoxThreeTitle)
+                                                                                                                                                                                            </td>
+                                                                                                                                                                                        </tr>
+                                                                                                                                                                                        <tr>
+                                                                                                                                                                                            <td class="adminTitle">
+                                                                                                                                                                                                @Html.SmartLabelFor(model => model.Locales[item].InfoBoxThreeText)
+                                                                                                                                                                                            </td>
+                                                                                                                                                                                            <td class="adminData wide">
+                                                                                                                                                                                                @Html.HiddenFor(model => model.Locales[item].LanguageId)
+
+
+                                                                                                                                                                                                @Html.EditorFor(model => Model.Locales[item].InfoBoxThreeText)
+                                                                                                                                                                                                @Html.ValidationMessageFor(model => model.Locales[item].InfoBoxThreeText)
+                                                                                                                                                                                            </td>
+                                                                                                                                                                                        </tr>
+
+                                                                                                                                                                                    </table>
+                                                                                                                                                                                                                                                                 ,
+                                                                                                                                                                                                                                                        @<table class="adminContent">
+                                                                                                                                                                                                                                                            <tr>
+                                                                                                                                                                                                                                                                <td class="adminTitle">
+                                                                                                                                                                                                                                                                    @Html.SmartLabelFor(model => model.InfoBoxThreeTitle)
+                                                                                                                                                                                                                                                                </td>
+                                                                                                                                                                                                                                                                <td class="adminData wide">
+                                                                                                                                                                                                                                                                    @Html.EditorFor(model => model.InfoBoxThreeTitle)
+                                                                                                                                                                                                                                                                    @Html.ValidationMessageFor(model => model.InfoBoxThreeTitle)
+                                                                                                                                                                                                                                                                </td>
+                                                                                                                                                                                                                                                            </tr>
+                                                                                                                                                                                                                                                            <tr>
+                                                                                                                                                                                                                                                                <td class="adminTitle">
+                                                                                                                                                                                                                                                                    @Html.SmartLabelFor(model => model.InfoBoxThreeText)
+                                                                                                                                                                                                                                                                </td>
+                                                                                                                                                                                                                                                                <td class="adminData wide">
+                                                                                                                                                                                                                                                                    @Html.EditorFor(model => model.InfoBoxThreeText)
+                                                                                                                                                                                                                                                                    @Html.ValidationMessageFor(model => model.InfoBoxThreeText)
+                                                                                                                                                                                                                                                                </td>
+                                                                                                                                                                                                                                                            </tr>
+
+                                                                                                                                                                                                                                                        </table>
+                                                                                                                                                                                                                                                                                                                     ))
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+            <div class="admin-config-group">
+                <div class="title">@T("Plugins.SmartPlugins.BoxInfo.BoxInfoFour")</div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.EnableInfoBoxFour)
+        </td>
+        <td class="adminData">
+            @Html.EditorFor(model => model.EnableInfoBoxFour)
+            @Html.ValidationMessageFor(model => model.EnableInfoBoxFour)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.InfoBoxFourUrl)
+        </td>
+        <td class="adminData">
+            @Html.EditorFor(model => model.InfoBoxFourUrl)
+            @Html.ValidationMessageFor(model => model.InfoBoxFourUrl)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.InfoBoxFourImageId)
+        </td>
+        <td class="adminData wide">
+            @Html.EditorFor(model => Model.InfoBoxFourImageId)
+            @Html.ValidationMessageFor(model => model.InfoBoxFourImageId)
+        </td>
+    </tr>
+    <tr class="toggle-slide-type-html">
+        <td colspan="2">
+            @(Html.LocalizedEditor<SmartPlugins.BoxInfo.Models.BoxInfoModel, SmartPlugins.BoxInfo.Models.BoxInfoLocalizedModel>("BoxInfoFour-localized",
+                                                                                                                                                                                    @<table class="adminContent">
+                                                                                                                                                                                        <tr>
+                                                                                                                                                                                            <td class="adminTitle">
+                                                                                                                                                                                                @Html.SmartLabelFor(model => model.Locales[item].InfoBoxFourTitle)
+                                                                                                                                                                                            </td>
+                                                                                                                                                                                            <td class="adminData wide">
+
+                                                                                                                                                                                                @Html.EditorFor(model => Model.Locales[item].InfoBoxFourTitle)
+                                                                                                                                                                                                @Html.ValidationMessageFor(model => model.Locales[item].InfoBoxFourTitle)
+                                                                                                                                                                                            </td>
+                                                                                                                                                                                        </tr>
+                                                                                                                                                                                        <tr>
+                                                                                                                                                                                            <td class="adminTitle">
+                                                                                                                                                                                                @Html.SmartLabelFor(model => model.Locales[item].InfoBoxFourText)
+                                                                                                                                                                                            </td>
+                                                                                                                                                                                            <td class="adminData wide">
+                                                                                                                                                                                                @Html.HiddenFor(model => model.Locales[item].LanguageId)
+
+                                                                                                                                                                                                @Html.EditorFor(model => Model.Locales[item].InfoBoxFourText)
+                                                                                                                                                                                                @Html.ValidationMessageFor(model => model.Locales[item].InfoBoxFourText)
+                                                                                                                                                                                            </td>
+                                                                                                                                                                                        </tr>
+
+                                                                                                                                                                                    </table>
+                                                                                                                                                                                                                                                                 ,
+                                                                                                                                                                                                                                                        @<table class="adminContent">
+                                                                                                                                                                                                                                                            <tr>
+                                                                                                                                                                                                                                                                <td class="adminTitle">
+                                                                                                                                                                                                                                                                    @Html.SmartLabelFor(model => model.InfoBoxFourTitle)
+                                                                                                                                                                                                                                                                </td>
+                                                                                                                                                                                                                                                                <td class="adminData wide">
+                                                                                                                                                                                                                                                                    @Html.EditorFor(model => model.InfoBoxFourTitle)
+                                                                                                                                                                                                                                                                    @Html.ValidationMessageFor(model => model.InfoBoxFourTitle)
+                                                                                                                                                                                                                                                                </td>
+                                                                                                                                                                                                                                                            </tr>
+                                                                                                                                                                                                                                                            <tr>
+                                                                                                                                                                                                                                                                <td class="adminTitle">
+                                                                                                                                                                                                                                                                    @Html.SmartLabelFor(model => model.InfoBoxFourText)
+                                                                                                                                                                                                                                                                </td>
+                                                                                                                                                                                                                                                                <td class="adminData wide">
+                                                                                                                                                                                                                                                                    @Html.EditorFor(model => model.InfoBoxFourText)
+                                                                                                                                                                                                                                                                    @Html.ValidationMessageFor(model => model.InfoBoxFourText)
+                                                                                                                                                                                                                                                                </td>
+                                                                                                                                                                                                                                                            </tr>
+                                                                                                                                                                                                                                                        </table>
+                                                                                                                                                                                                                                                                                                                     ))
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+            <div class="admin-config-group">
+                <div class="title">@T("Plugins.SmartPlugins.BoxInfo.BoxInfoFive")</div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.EnableInfoBoxFive)
+        </td>
+        <td class="adminData">
+            @Html.EditorFor(model => model.EnableInfoBoxFive)
+            @Html.ValidationMessageFor(model => model.EnableInfoBoxFive)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.InfoBoxFiveUrl)
+        </td>
+        <td class="adminData">
+            @Html.EditorFor(model => model.InfoBoxFiveUrl)
+            @Html.ValidationMessageFor(model => model.InfoBoxFiveUrl)
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            @Html.SmartLabelFor(model => model.InfoBoxFiveImageId)
+        </td>
+        <td class="adminData wide">
+            @Html.EditorFor(model => Model.InfoBoxFiveImageId)
+            @Html.ValidationMessageFor(model => model.InfoBoxFiveImageId)
+        </td>
+    </tr>
+    <tr class="toggle-slide-type-html">
+        <td colspan="2">
+            @(Html.LocalizedEditor<SmartPlugins.BoxInfo.Models.BoxInfoModel, SmartPlugins.BoxInfo.Models.BoxInfoLocalizedModel>("BoxInfoFive-localized",
+                                                                                                                                                                                    @<table class="adminContent">
+                                                                                                                                                                                        <tr>
+                                                                                                                                                                                            <td class="adminTitle">
+                                                                                                                                                                                                @Html.SmartLabelFor(model => model.Locales[item].InfoBoxFiveTitle)
+                                                                                                                                                                                            </td>
+                                                                                                                                                                                            <td class="adminData wide">
+
+                                                                                                                                                                                                @Html.EditorFor(model => Model.Locales[item].InfoBoxFiveTitle)
+                                                                                                                                                                                                @Html.ValidationMessageFor(model => model.Locales[item].InfoBoxFiveTitle)
+                                                                                                                                                                                            </td>
+                                                                                                                                                                                        </tr>
+                                                                                                                                                                                        <tr>
+                                                                                                                                                                                            <td class="adminTitle">
+                                                                                                                                                                                                @Html.SmartLabelFor(model => model.Locales[item].InfoBoxFiveText)
+                                                                                                                                                                                            </td>
+                                                                                                                                                                                            <td class="adminData wide">
+                                                                                                                                                                                                @Html.HiddenFor(model => model.Locales[item].LanguageId)
+
+                                                                                                                                                                                                @Html.EditorFor(model => Model.Locales[item].InfoBoxFiveText)
+                                                                                                                                                                                                @Html.ValidationMessageFor(model => model.Locales[item].InfoBoxFiveText)
+                                                                                                                                                                                            </td>
+                                                                                                                                                                                        </tr>
+
+                                                                                                                                                                                    </table>
+                                                                                                                                                                                                                                                             ,
+                                                                                                                                                                                                                                                    @<table class="adminContent">
+                                                                                                                                                                                                                                                        <tr>
+                                                                                                                                                                                                                                                            <td class="adminTitle">
+                                                                                                                                                                                                                                                                @Html.SmartLabelFor(model => model.InfoBoxFiveTitle)
+                                                                                                                                                                                                                                                            </td>
+                                                                                                                                                                                                                                                            <td class="adminData wide">
+                                                                                                                                                                                                                                                                @Html.EditorFor(model => model.InfoBoxFiveTitle)
+                                                                                                                                                                                                                                                                @Html.ValidationMessageFor(model => model.InfoBoxFiveTitle)
+                                                                                                                                                                                                                                                            </td>
+                                                                                                                                                                                                                                                        </tr>
+                                                                                                                                                                                                                                                        <tr>
+                                                                                                                                                                                                                                                            <td class="adminTitle">
+                                                                                                                                                                                                                                                                @Html.SmartLabelFor(model => model.InfoBoxFiveText)
+                                                                                                                                                                                                                                                            </td>
+                                                                                                                                                                                                                                                            <td class="adminData wide">
+                                                                                                                                                                                                                                                                @Html.EditorFor(model => model.InfoBoxFiveText)
+                                                                                                                                                                                                                                                                @Html.ValidationMessageFor(model => model.InfoBoxFiveText)
+                                                                                                                                                                                                                                                            </td>
+                                                                                                                                                                                                                                                        </tr>
+                                                                                                                                                                                                                                                    </table>
+                                                                                                                                                                                                                                                                                                             ))
+        </td>
+    </tr>
+    <tr>
+        <td class="adminTitle">
+            &nbsp;
+        </td>
+        <td class="adminData">
+            <button type="submit" name="save" value="save" class="btn btn-primary">
+                <i class="fa fa-check"></i>&nbsp;@T("Admin.Common.Save")
+            </button>
+        </td>
+    </tr>
+</table>
+
+}

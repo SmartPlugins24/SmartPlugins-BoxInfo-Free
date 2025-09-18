@@ -1,0 +1,107 @@
+﻿@model BoxInfoViewModel
+@using SmartPlugins.BoxInfo.Models
+@{ 
+	int i= 0;
+}
+<div class="card-deck text-center m-2 info-box-plugin">
+	@if (Model.EnableInfoBoxOne)
+	{
+		i++;
+		<div class="card">
+			<a href="@Model.InfoBoxOneUrl">
+				<img class="mx-auto mt-2 img-fluid" src="@Model.InfoBoxOneImageUrl" alt="@Model.InfoBoxOneTitle">
+			</a>
+			<div class="card-body">
+				<a href="@Model.InfoBoxOneUrl">
+					<h5 class="card-title" @Html.LanguageAttributes(Model.InfoBoxOneTitle)>@Model.InfoBoxOneTitle</h5>
+				</a>
+				<p class="card-text" @Html.LanguageAttributes(Model.InfoBoxOneText)>@Model.InfoBoxOneText</p>
+			</div>
+		</div>
+	}
+	@if (Model.EnableInfoBoxTwo)
+	{
+		i++;
+		<div class="card">
+			<a href="@Model.InfoBoxTwoUrl">
+				<img class="mx-auto mt-2 img-fluid" src="@Model.InfoBoxTwoImageUrl" alt="@Model.InfoBoxTwoTitle">
+			</a>
+			<div class="card-body">
+				<a href="@Model.InfoBoxTwoUrl">
+					<h5 class="card-title" @Html.LanguageAttributes(Model.InfoBoxTwoTitle)>@Model.InfoBoxTwoTitle</h5>
+				</a>
+				<p class="card-text" @Html.LanguageAttributes(Model.InfoBoxTwoText)>@Model.InfoBoxTwoText</p>
+			</div>
+		</div>
+	}
+	@if (i == 2)
+	{
+		<div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
+	}
+	@if (Model.EnableInfoBoxThree)
+	{
+		i++;
+		<div class="card">
+			<a href="@Model.InfoBoxThreeUrl">
+				<img class="mx-auto mt-2 img-fluid" src="@Model.InfoBoxThreeImageUrl" alt="@Model.InfoBoxThreeTitle">
+			</a>
+			<div class="card-body">
+				<a href="@Model.InfoBoxThreeUrl">
+					<h5 class="card-title" @Html.LanguageAttributes(Model.InfoBoxThreeTitle)>@Model.InfoBoxThreeTitle</h5>
+				</a>
+				<p class="card-text" @Html.LanguageAttributes(Model.InfoBoxThreeText)>@Model.InfoBoxThreeText</p>
+			</div>
+		</div>
+	}
+	@if (i == 2)
+	{
+		<div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
+	}
+	@if (i == 3)
+	{
+		<div class="w-100 d-none d-md-block d-lg-none"><!-- wrap every 3 on md--></div>
+	}
+	@if (Model.EnableInfoBoxFour)
+	{
+		i++;
+		<div class="card">
+			<a href="@Model.InfoBoxFourUrl">
+				<img class="mx-auto mt-2 img-fluid" src="@Model.InfoBoxFourImageUrl" alt="@Model.InfoBoxFourTitle">
+			</a>
+			<div class="card-body">
+				<a href="@Model.InfoBoxFourUrl">
+					<h5 class="card-title" @Html.LanguageAttributes(Model.InfoBoxFourTitle)>@Model.InfoBoxFourTitle</h5>
+				</a>
+				<p class="card-text" @Html.LanguageAttributes(Model.InfoBoxFourText)>@Model.InfoBoxFourText</p>
+			</div>
+		</div>
+	}
+	@if (i == 2 || i == 4)
+	{
+		<div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
+	}
+	@if (i == 3)
+	{
+		<div class="w-100 d-none d-md-block d-lg-none"><!-- wrap every 3 on md--></div>
+	}
+	@if (i == 4)
+	{
+		<div class="w-100 d-none d-lg-block d-xl-none"><!-- wrap every 4 on lg--></div>
+	}
+	@if (Model.EnableInfoBoxFive)
+	{
+		i++;
+		<div class="card">
+			<a href="@Model.InfoBoxFiveUrl">
+				<img class="mx-auto mt-2 img-fluid" src="@Model.InfoBoxFiveImageUrl" alt="@Model.InfoBoxFiveTitle">
+			</a>
+			<div class="card-body">
+				<a href="@Model.InfoBoxFiveUrl">
+					<h5 class="card-title" @Html.LanguageAttributes(Model.InfoBoxFiveTitle)>@Model.InfoBoxFiveTitle</h5>
+				</a>
+				<p class="card-text" @Html.LanguageAttributes(Model.InfoBoxFiveText)>@Model.InfoBoxFiveText</p>
+			</div>
+		</div>
+	}
+
+</div>

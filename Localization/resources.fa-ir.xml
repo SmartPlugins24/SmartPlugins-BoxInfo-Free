@@ -1,0 +1,69 @@
+﻿<Language Name="Persian" IsDefault="true" IsRightToLeft="true">
+  <LocaleResource Name="Plugins.FriendlyName.SmartPlugins.BoxInfo" AppendRootKey="false">
+    <Value>جعبه اطلاعات</Value>
+  </LocaleResource>
+	<LocaleResource Name="AdminInstruction">
+		<Value>
+			<![CDATA[
+        <p>برای فعال سازی پلاگین به قسمت مدیریت محتوا => ابزارک بروید</p>
+      ]]>
+		</Value>
+	</LocaleResource>
+  <LocaleResource Name="Plugins.SmartPlugins.BoxInfo" AppendRootKey="false">
+    <Children>
+		<LocaleResource Name="AdminInstruction">
+			<Value>
+				<![CDATA[]]>
+			</Value>
+		</LocaleResource>
+		<LocaleResource Name="Fields.EnableInfoBox">
+			<Value>فعال کردن</Value>
+		</LocaleResource>
+		<LocaleResource Name="Fields.EnableInfoBox.Hint">
+			<Value>برای فعال سازی انتخاب کنید</Value>
+		</LocaleResource>
+		<LocaleResource Name="Fields.InfoBoxUrl">
+			<Value>Url</Value>
+		</LocaleResource>
+		<LocaleResource Name="Fields.InfoBoxUrl.Hint">
+			<Value>مسیر اینترنتی را وارد کنید</Value>
+		</LocaleResource>
+		<LocaleResource Name="Fields.InfoBoxTitle">
+			<Value>عنوان</Value>
+		</LocaleResource>
+		<LocaleResource Name="Fields.InfoBoxTitle.Hint">
+			<Value>یک عنوان برای جعبه اطلاعات وارد کنید</Value>
+		</LocaleResource>
+		<LocaleResource Name="Fields.InfoBoxText">
+			<Value>متن</Value>
+		</LocaleResource>
+		<LocaleResource Name="Fields.InfoBoxText.Hint">
+			<Value>یک متن برای جعبه اطلاعات وارد کنید</Value>
+		</LocaleResource>
+		<LocaleResource Name="Fields.InfoBoxImageId">
+			<Value>تصویر</Value>
+		</LocaleResource>
+		<LocaleResource Name="Fields.InfoBoxImageId.Hint">
+			<Value>تصویر مورد نظر را وارد کنید</Value>
+		</LocaleResource>
+		<LocaleResource Name="BoxInfoOne">
+			<Value>جعبه اطلاعات یک</Value>
+		</LocaleResource>
+		<LocaleResource Name="BoxInfoTwo">
+			<Value>جعبه اطلاعات دو</Value>
+		</LocaleResource>
+		<LocaleResource Name="BoxInfoThree">
+			<Value>جعبه اطلاعات سه</Value>
+		</LocaleResource>
+		<LocaleResource Name="BoxInfoFour">
+			<Value>جعبه اطلاعات چهار</Value>
+		</LocaleResource>
+		<LocaleResource Name="BoxInfoFive">
+			<Value>جعبه اطلاعات پنح</Value>
+		</LocaleResource>
+      <LocaleResource Name="WidgetZone">
+        <Value>محل قرارگیری</Value>
+      </LocaleResource>
+    </Children>
+  </LocaleResource>
+</Language>

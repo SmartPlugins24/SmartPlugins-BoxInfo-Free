@@ -1,0 +1,69 @@
+﻿<Language Name="English" IsDefault="false" IsRightToLeft="false">
+  <LocaleResource Name="Plugins.FriendlyName.SmartPlugins.BoxInfo" AppendRootKey="false">
+    <Value>Info Boxes</Value>
+  </LocaleResource>
+	<LocaleResource Name="AdminInstruction">
+		<Value>
+			<![CDATA[
+        <p>for active go to CMS => widget</p>
+      ]]>
+		</Value>
+	</LocaleResource>
+	<LocaleResource Name="Plugins.SmartPlugins.BoxInfo" AppendRootKey="false">
+		<Children>
+  <LocaleResource Name="AdminInstruction">
+    <Value>
+      <![CDATA[]]>
+    </Value>
+  </LocaleResource>
+	<LocaleResource Name="Fields.EnableInfoBox">
+		<Value>Enable Info Box</Value>
+	</LocaleResource>
+  <LocaleResource Name="Fields.EnableInfoBox.Hint">
+    <Value>Choose to enable the info box</Value>
+  </LocaleResource>
+	<LocaleResource Name="Fields.InfoBoxUrl">
+		<Value>Url</Value>
+	</LocaleResource>
+	<LocaleResource Name="Fields.InfoBoxUrl.Hint">
+		<Value>Item Box URL</Value>
+	</LocaleResource>
+	<LocaleResource Name="Fields.InfoBoxTitle">
+		<Value>Info Box Title</Value>
+	</LocaleResource>
+	<LocaleResource Name="Fields.InfoBoxTitle.Hint">
+		<Value>Choose the info box title</Value>
+	</LocaleResource>
+	<LocaleResource Name="Fields.InfoBoxText">
+		<Value>Info Box Text</Value>
+	</LocaleResource>
+	<LocaleResource Name="Fields.InfoBoxText.Hint">
+		<Value>Choose the info box Text</Value>
+	</LocaleResource>
+	<LocaleResource Name="Fields.InfoBoxImageId">
+		<Value>Info Box Image</Value>
+	</LocaleResource>
+	<LocaleResource Name="Fields.InfoBoxImageId.Hint">
+		<Value>Choose the info box image</Value>
+	</LocaleResource>
+	<LocaleResource Name="BoxInfoOne">
+		<Value>Info Box One</Value>
+	</LocaleResource>
+	<LocaleResource Name="BoxInfoTwo">
+		<Value>Info Box Two</Value>
+	</LocaleResource>
+	<LocaleResource Name="BoxInfoThree">
+		<Value>Info Box Three</Value>
+	</LocaleResource>
+	<LocaleResource Name="BoxInfoFour">
+		<Value>Info Box Four</Value>
+	</LocaleResource>
+	<LocaleResource Name="BoxInfoFive">
+		<Value>Info Box Five</Value>
+	</LocaleResource>
+      <LocaleResource Name="WidgetZone">
+        <Value>Widget Zone</Value>
+      </LocaleResource>
+		</Children>
+	</LocaleResource>
+</Language>
